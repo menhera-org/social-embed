@@ -9,7 +9,7 @@
 let screen_name = String(new URLSearchParams(location.search).get('screen_name') || '');
   
 // prevent arbitrary injections
-if (!screen_name.match(/[A-Za-z0-9_]{1,15}/) {
+if (!screen_name.match(/[A-Za-z0-9_]{1,15}/)) {
   screen_name = 'MenheraOrg';
 }
 document.write(`<a class="twitter-timeline" data-lang="ja" data-chrome="nofooter" href="https://twitter.com/${screen_name}?ref_src=twsrc%5Etfw">Tweets by ${screen_name}</a>`);
